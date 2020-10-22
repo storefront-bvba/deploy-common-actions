@@ -30,9 +30,9 @@ git config --local user.email "gha@gha"
 git config --local user.name "GHA"
 
 # Copy updated Github Action workflow files to the repo
-cp -r ../${CURRENT_REPO_FOLDER}/${GHA_DEPLOYMENT_FOLDER}/ .
+cp -r ../${CURRENT_REPO_FOLDER}/${GHA_DEPLOYMENT_FOLDER}/ ../
 
-git add * -- ':!${GHA_DEPLOYMENT_FOLDER}/*'
+git add *
 
 if [ -z "$COMMIT_MESSAGE" ]; then
     COMMIT_MESSAGE="Updating Github Action workflows."
