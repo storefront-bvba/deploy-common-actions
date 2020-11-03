@@ -54,6 +54,6 @@ if [[ $PR_STATUS != *"open"* ]]; then
 fi
 
 PR_NUMBER=$(echo ${RESPONSE} | jq '.number')
-curl -s -H "${HEADER_AUTH_TOKEN}" -d '{"labels": ["automerge", "gh_action"]}' "https://api.github.com/repos/${USER}/${REPOSITORY}/issues/${PR_NUMBER/labels"
+curl -s -H "${HEADER_AUTH_TOKEN}" -d '{"labels": ["automerge", "gh_action"]}' "https://api.github.com/repos/${USER}/${REPOSITORY}/issues/${PR_NUMBER}/labels"
 
 set +x 
